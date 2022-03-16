@@ -16,6 +16,6 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
-db.plats = require("./pltat")(sequelize, Sequelize)
+db.plats = require("./plat"),(sequelize, Sequelize)
 
 module.exports = db
