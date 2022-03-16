@@ -5,10 +5,10 @@ const Plat = db.plats
 function getAllPlats(req, res){
     Plat.findAll()
        .then(function(data){
-           res.send(data)
+           res.render("plats", {title: "Mes plats"})
        })
        .catch(function(err){
-           res.status(500).send({message:err.message })
+           res.status(500).send({ message: err.message })
        })
 }
 

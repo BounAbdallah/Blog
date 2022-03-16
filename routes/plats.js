@@ -1,9 +1,9 @@
-const express = require("express")
+const express = require('express')
 
 const router = express.Router()
 
-const plat = require("../controllers/plat")
+const plat = require('../controllers/plat')
 
-router.length("/", plat.getAllPlats)
+router.get('/', plat.getAllPlats)
 
 module.exports = router
