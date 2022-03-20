@@ -1,6 +1,6 @@
-const dbConfig = require("../config/db.config")
+const dbConfig = require('../config/db.config')
 
-const Sequelize = require("sequelize")
+const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD,{
     host: dbConfig.HOST,
@@ -13,9 +13,10 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD,{
 })
 
 const db = {}
+
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
-db.plats = require("./plat"),(sequelize, Sequelize)
+db.plats = require('./plat')(sequelize, Sequelize)
 
 module.exports = db
